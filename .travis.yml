@@ -9,7 +9,11 @@ php:
     - nightly
 install:
     - sudo apt-get update
-    - sudo apt-get install -y php-pear
 script:
-    - sudo bash install.sh
+    - git clone git@github.com:krakjoe/uopz.git
+    - if [[ -v "${OLDVERSION}" ]]; then git checkout PHP5; fi
+    - phpize
+    - ./configure
+    - make
+    - echo "extension = uopz.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - php index.php
