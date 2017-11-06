@@ -19,6 +19,7 @@ matrix:
       env: 'OLDVERSION="5.6"'
 script:
     - git clone git@github.com:krakjoe/uopz.git
+    - cd uopz
     - if [[ -v "${OLDVERSION}" ]]; then git checkout PHP5; fi
     - phpize
     - ./configure
