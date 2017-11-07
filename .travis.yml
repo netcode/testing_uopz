@@ -10,7 +10,7 @@ install:
     - sudo apt-get update
     # - sudo apt-get install php-dev
     - sudo apt-get install php-pear
-    - pecl install uopz
+    - if [[ ${TRAVIS_PHP_VERSION:0:3} -lt 7 ]]; then pecl install uopz-2.0.7; fi
     - echo "extension = uopz.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 script:
    # - cd uopz2
