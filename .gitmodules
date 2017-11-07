@@ -1,0 +1,3 @@
+[submodule "uopz"]
+	path = uopz
+	url = git@github.com:krakjoe/uopz.git
