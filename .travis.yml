@@ -8,7 +8,7 @@ php:
     - nightly
 install:
     - sudo apt-get update
-    - sudo apt-get install php-dev
+    # - sudo apt-get install php-dev
     - sudo apt-get install php-pear
     - pecl install uopz
     - echo "extension = uopz.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
