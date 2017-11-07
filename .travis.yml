@@ -16,7 +16,6 @@ script:
     - phpize
     - ./configure
     - make
-    - make test
     - sudo make install
     - echo "extension = uopz.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - cd ..
